@@ -28,3 +28,17 @@ Thumbs.db
 
 # Environment
 .env
+
+# Node / Angular
+oms-fe/node_modules/
+oms-fe/dist/
+oms-fe/.angular/
+
+# Java / Gradle / Spring Boot
+oms-be/build/
+oms-be/.gradle/
+*.class
+
+# IDE
+.vscode/
+.idea/
