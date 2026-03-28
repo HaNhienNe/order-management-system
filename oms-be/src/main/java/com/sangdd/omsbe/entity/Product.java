@@ -1,7 +1,10 @@
 package com.sangdd.omsbe.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 
 @Entity
@@ -21,4 +24,8 @@ public class Product {
     private String name;
 
     private Double price;
+
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY)
+    @JsonBackReference
+    private List<OrderItem> orderItems;
 }
